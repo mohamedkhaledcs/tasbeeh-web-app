@@ -1,4 +1,4 @@
-const CACHE_NAME = "tasbeeh-app-v1";
+const CACHE_NAME = "tasbeeh-app-v2";
 
 const ASSETS = [
   "./",
