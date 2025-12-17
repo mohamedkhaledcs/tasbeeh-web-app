@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Tasbeeh Web App - A modern, clean, and respectful remembrance experience."
+    />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- ================= TITLE ================= -->
+    <title>Tasbeeh Web App</title>
+
+    <!-- ================= ICON ================= -->
+    <link rel="icon" href="assets/tasbeeh-icon.svg" />
+
+    <!-- ================= STYLES ================= -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ================= MANIFEST for mobile app ================= -->
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+
+
+  <body class="app light-mode">
+    <!-- ================= START MODAL ================= -->
+    <div class="modal-overlay" id="startModal">
+      <div class="modal-card">
+        <h2 class="modal-title">صدقة جارية</h2>
+        <p class="modal-text">
+          على روح والد صديقنا<br />
+          <strong>عمر عبدالرحيم</strong>
+        </p>
+        <p class="modal-duaa">اللهم تقبل منا ومنكم</p>
+        <button class="btn primary-btn" id="startAppBtn">Start</button>
+      </div>
+    </div>
+
+    <!-- ================= TOP BAR ================= -->
+    <header class="top-bar">
+      <div class="app-brand">
+        <img
+          class="brand-icon"
+          src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/1200/        external-tasbih-islamic-smashingstocks-circular-smashing-stocks.jpg"
+        />
+
+        <span class="brand-name">Tasbeeh</span>
+      </div>
+
+      <div class="top-controls">
+        <button class="icon-btn" id="langToggle" title="Language">🌐</button>
+        <button class="icon-btn" id="themeToggle" title="Dark / Light">
+          🌙
+        </button>
+        <button class="icon-btn" id="vibrationToggle" title="Vibration">
+          📳
+        </button>
+        <button class="icon-btn" id="quietToggle" title="Quiet Mode">🔕</button>
+      </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-container">
+      <!-- ===== ZIKR SELECTOR ===== -->
+      <section class="zikr-selector">
+        <button class="zikr-chip active" data-index="0">سبحان الله</button>
+        <button class="zikr-chip" data-index="1">الحمد لله</button>
+        <button class="zikr-chip" data-index="2">الله أكبر</button>
+        <button class="zikr-chip" data-index="3">لا إله إلا الله</button>
+        <button class="zikr-chip" data-index="4">صلّي على محمد</button>
+      </section>
+
+      <!-- ===== COUNTER AREA ===== -->
+      <section class="counter-section">
+        <div class="progress-circle-wrapper" id="counterTapArea">
+          <svg class="progress-ring" width="220" height="220">
+            <circle class="progress-ring-bg" cx="110" cy="110" r="100" />
+            <circle class="progress-ring-fill" cx="110" cy="110" r="100" />
+          </svg>
+
+          <!-- Number / Checkmark -->
+          <div class="counter-value" id="counterValue">0</div>
+        </div>
+
+        <!-- ===== CONTROLS ===== -->
+        <div class="counter-controls">
+          <button class="btn primary-btn" id="tasbeehBtn">Tasbeeh</button>
+          <button class="btn secondary-btn" id="resetBtn">Reset</button>
+          <button class="btn ghost-btn" id="editBtn">Edit</button>
+        </div>
+
+        <!-- ===== SESSION COUNT ===== -->
+        <div class="session-counter">
+          <span class="session-label">Session Count:</span>
+          <span class="session-value" id="sessionCount">0</span>
+        </div>
+      </section>
+
+      <!-- ===== DUAA AREA ===== -->
+      <section class="duaa-section">
+        <p class="duaa-text" id="duaaText">
+          اللهم اغفر له وارحمه واجعل مثواه الجنة
+        </p>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="app-footer">
+      <span class="footer-text">Developed by</span>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/mohamedkhaledcs/" target="_blank"
+          >ig</a
+        >
+        <a
+          href="https://www.linkedin.com/in/mohamed-khaled-a314792ab/"
+          target="_blank"
+          >linkedin</a
+        >
+        <a href="https://github.com/mohamedkhaledcs/" target="_blank">github</a>
+      </div>
+    </footer>
+
+    <!-- ================= EDIT MODAL ================= -->
+    <div class="modal-overlay hidden" id="editModal">
+      <div class="modal-card">
+        <h3>Edit Zikr</h3>
+
+        <label>
+          Zikr Text
+          <input type="text" id="editZikrText" />
+        </label>
+
+        <label>
+          Count Limit
+          <input type="number" id="editZikrLimit" min="1" />
+        </label>
+
+        <div class="modal-actions">
+          <button class="btn primary-btn" id="saveEditBtn">Save</button>
+          <button class="btn secondary-btn" id="cancelEditBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="js/script.js"></script>
+
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+  </body>
+</html>

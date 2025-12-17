@@ -1,0 +1,111 @@
+Tasbeeh Web App
+================
+
+A modern, clean, and respectful digital tasbeeh web application
+designed to feel like a real mobile app experience.
+
+--------------------------------------------------
+Project Name
+--------------------------------------------------
+tasbeeh-web-app
+
+--------------------------------------------------
+Idea
+--------------------------------------------------
+This application was built as a digital tasbeeh intended for
+remembrance (dhikr) and sadaqah jariyah (ongoing charity).
+
+It is designed to be simple, calm, and distraction-free,
+suitable for all ages.
+
+The app automatically guides the user through a full tasbeeh cycle
+and allows customization without storing any data.
+
+--------------------------------------------------
+Core Features
+--------------------------------------------------
+- Digital Tasbeeh with progress circle
+- Number displayed inside the circle
+- Click counter or "Tasbeeh" button to increment
+- Automatic reset and move to next zikr on completion
+- Completion feedback (✔️ + soft sound)
+- Loop through all azkar continuously
+- Session counter (resets on refresh)
+- Dynamic duaa section (changes on every click)
+
+--------------------------------------------------
+Azkar List (Default)
+--------------------------------------------------
+1. سبحان الله (33)
+2. الحمد لله (33)
+3. الله أكبر (34)
+4. لا إله إلا الله (100)
+5. صلّي على محمد (100)
+
+Each zikr can be edited (text + count) using the Edit button.
+
+--------------------------------------------------
+Modes & Controls
+--------------------------------------------------
+- Dark / Light mode
+- Vibration ON / OFF
+- Quiet mode (disables vibration, sound, heavy animations)
+- Language modes:
+  - EN  : English UI
+  - AR  : Arabic UI (RTL)
+  - MIX : English UI + Arabic azkar (default)
+
+--------------------------------------------------
+Language Behavior
+--------------------------------------------------
+- UI text changes based on selected language
+- Azkar and duaa always remain Arabic
+- Layout direction switches automatically (LTR / RTL)
+
+--------------------------------------------------
+Opening Message
+--------------------------------------------------
+On every app load, a start modal appears with the message:
+
+"صدقة جارية على روح والد صديقنا عمر عبدالرحيم
+اللهم تقبل منا ومنكم"
+
+--------------------------------------------------
+Design Principles
+--------------------------------------------------
+- Mobile-first design
+- Minimal and respectful UI
+- No frameworks (pure HTML, CSS, JS)
+- Soft animations
+- App-like interaction feel
+- Fully responsive
+
+--------------------------------------------------
+Technical Notes
+--------------------------------------------------
+- No database
+- No localStorage or sessionStorage
+- No cookies
+- All logic runs in memory only
+- Clean, readable, and scalable code structure
+
+--------------------------------------------------
+Project Structure
+--------------------------------------------------
+/index.html
+/css/style.css
+/js/script.js
+/notes about app.txt
+/assets/
+
+--------------------------------------------------
+Credits
+--------------------------------------------------
+Developed by:
+Social links are available in the footer (icons only).
+
+--------------------------------------------------
+License
+--------------------------------------------------
+This project is open for learning, sharing, and sadaqah purposes.
+Feel free to fork and improve respectfully.
